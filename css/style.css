@@ -10,16 +10,58 @@
     /* border: 1px solid #000; */
 }
 
-header, section, footer{
+header, .lnb, .ad, .con, footer{
     border-radius: 10px;
+    margin-bottom: 5px;
 }
 
 header{
     height: 100px;
-    background-color:gray;
+    background-color: gray;
+}
+
+section{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+section>.left{
+    width: 25%;
+    height: 400px;
+}
+
+section>.left>.lnb{
+        height: 250px;background: blue;
+    }
+
+section>.left>.ad{
+        height: 140px;
+        background-color: pink;
+    }
+
+section>.con{
+        width: 74%;
+        background-color: yellow;
 }
 
 footer{
     height: 100px;
     background: brown;
+}
+
+@media screen and (max-width:640px){
+    #wrap{
+        width: 100%;
+        margin: 0;
+    }
+    section{
+        display: block;
+    }
+    section>.left{
+        width: 100%;
+    }
+    section>.con{
+        width: 100%;
+    }
 }
